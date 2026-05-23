@@ -1,24 +1,41 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
 import About from "./components/About"
-import Projects from "./components/Projects"
-import Tech from "./components/Tech"
-import Footer from "./components/Footer"
-import Experience from "./components/Experience"
 import BackgroundEffects from "./components/BackgroundEffects"
 import CursorGlow from "./components/CursorGlow"
+import Experience from "./components/Experience"
+import Footer from "./components/Footer"
+import Hero from "./components/Hero"
+import Loader from "./components/Loader"
+import Navbar from "./components/Navbar"
+import Projects from "./components/Projects"
+import ScrollProgress from "./components/ScrollProgress"
+import Tech from "./components/Tech"
+
 export default function App() {
   return (
-    <main className="bg-[#0B0F19] text-white">
+    <div className="relative min-h-screen overflow-hidden bg-[#020617] text-white">
+
+      <ScrollProgress />
+
+      <Loader />
+
       <BackgroundEffects />
+
       <CursorGlow />
+
       <Navbar />
+
       <Hero />
+
       <About />
-      <Projects />
-      <Tech />
-      <Footer />
+
       <Experience />
-    </main>
+
+      <Projects />
+
+      <Tech />
+
+      <Footer />
+
+    </div>
   )
 }
